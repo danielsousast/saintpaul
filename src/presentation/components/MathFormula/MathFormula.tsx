@@ -1,24 +1,31 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
-//@ts-ignore
-import MathJax from 'react-native-mathjax';
 import styled from 'styled-components/native';
+import {MathJaxSvg} from 'react-native-mathjax-html-to-svg';
 
 interface MathFormulaProps {
   formula?: string;
+  color?: string;
 }
 
-export function MathFormula({formula}: MathFormulaProps) {
+export function MathFormula({formula, color = '#fff'}: MathFormulaProps) {
   return (
     <Wrapper>
-      <MathJax fontSize={40} html={formula} />
+      <MathJaxSvg
+        color="white"
+        fontSize={18}
+        style={{
+          backgroundColor: color,
+        }}>
+        {formula}
+      </MathJaxSvg>
     </Wrapper>
   );
 }
 
 export const Wrapper = styled.View`
   justify-content: center;
-  background-color: #fff;
+  background-color: ${({theme}) => theme.colors.shape};
   height: ${Dimensions.get('window').height / 12}px;
   width: ${Dimensions.get('window').width - 80}px;
 `;

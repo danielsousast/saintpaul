@@ -1,11 +1,18 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import {MathFormula} from '../../components/MathFormula/MathFormula';
+import {AppScreenProps, NavRoutes} from '@/main/navigation';
+import {Screen, HomeIllustration} from '@/presentation/components';
+import * as S from './HomeStyles';
 
-export function HomeScreen() {
+export function HomeScreen({navigation}: AppScreenProps<NavRoutes.Home>) {
+  function handleStart() {
+    navigation.navigate(NavRoutes.Quiz);
+  }
+
   return (
-    <SafeAreaView>
-      <MathFormula formula="x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
-    </SafeAreaView>
+    <Screen onButtonPress={handleStart} buttonText="Resolver Questões">
+      <S.ImageContainer>
+        <HomeIllustration size={350} />
+      </S.ImageContainer>
+    </Screen>
   );
 }

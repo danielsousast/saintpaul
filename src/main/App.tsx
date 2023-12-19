@@ -1,9 +1,12 @@
 import React from 'react';
-
-import QuizScreen from '../presentation/screens/QuizScreen/QuizScreen';
-
-// import { Container } from './styles';
+import MainNavigator from './navigation/MainNavigator';
+import {ThemeProvider} from 'styled-components/native';
+import {darkTheme} from '@/common/styles/theme';
 
 export default function App() {
-  return <QuizScreen />;
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <MainNavigator />
+    </ThemeProvider>
+  );
 }
