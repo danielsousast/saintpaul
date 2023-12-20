@@ -14,6 +14,8 @@ export const Content = styled.View`
 export const IconButton = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
+  height: 30px;
+  width: 30px;
 `;
 
 export const Header = styled.View`

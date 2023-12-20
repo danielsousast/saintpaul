@@ -11,3 +11,11 @@ export interface QuestionAPI {
 export interface Question extends QuestionAPI {
   answer: string;
 }
+
+export interface Quiz {
+  id: number;
+  date: string;
+  correctAnswers: number;
+  totalQuestions: number;
+  score: number;
+}

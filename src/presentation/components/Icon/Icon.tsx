@@ -1,21 +1,31 @@
 import * as React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import {ArrowLeftIcon} from './ArrowLeftIcon';
+import HappyIcon from './HappyIcon';
+import SadIcon from './SadIcon';
+import RegularIcon from './RegularIcon';
+import {LetterAIcon} from './LetterAIcon';
+import {LetterBIcon} from './LetterBIcon';
+import {LetterCIcon} from './LetterCIcon';
 
-interface IconProps {
+const iconMap = {
+  arrowLeft: ArrowLeftIcon,
+  happy: HappyIcon,
+  sad: SadIcon,
+  regular: RegularIcon,
+  letterA: LetterAIcon,
+  letterB: LetterBIcon,
+  letterC: LetterCIcon,
+};
+
+export type IconNames = keyof typeof iconMap;
+
+interface Props {
+  name: IconNames;
   size?: number;
   color?: string;
 }
 
-export function Icon({size = 20, color = '#000'}: IconProps) {
-  return (
-    <Svg width={size} height={size} fill="none" viewBox="0 0 24 24">
-      <Path
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M5 12h14M5 12l6-6m-6 6l6 6"
-      />
-    </Svg>
-  );
+export function Icon({name = 'arrowLeft', size = 20, color = '#ccc'}: Props) {
+  const IconComponent = iconMap[name];
+  return <IconComponent size={size} color={color} />;
 }

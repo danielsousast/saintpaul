@@ -1,7 +1,8 @@
 import React from 'react';
 import * as S from './QuizItemStyles';
-import {MathFormula} from '@/presentation/components';
+import {Icon, IconNames, MathFormula} from '@/presentation/components';
 import {useTheme} from 'styled-components/native';
+import {LetterAIcon} from '@/presentation/components/Icon/LetterAIcon';
 
 interface QuizItemProps {
   option: {answer: string};
@@ -17,13 +18,17 @@ export function QuizItem({option, index, selected, onPress}: QuizItemProps) {
       key={option.answer}
       selected={selected}
       onPress={() => onPress(option)}>
-      <S.QuizItemText>{mapIndexToLetter(index)}</S.QuizItemText>
+      <Icon
+        size={40}
+        name={mapIndexToLetter(index)}
+        color={selected ? colors.primary : colors.text}
+      />
       <MathFormula formula={option.answer} color={colors.shape} />
     </S.QuizItemWrapper>
   );
 }
 
-const mapIndexToLetter = (index: number) => {
-  const letters = ['A) ', 'B) ', 'C) ', 'D) ', 'E)'];
-  return letters[index];
+const mapIndexToLetter = (index: number): IconNames => {
+  const letters = ['letterA', 'letterB', 'letterC'];
+  return letters[index] as IconNames;
 };

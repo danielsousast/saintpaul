@@ -24,6 +24,7 @@ export function MathFormula({formula, color = '#fff'}: MathFormulaProps) {
 }
 
 export const Wrapper = styled.View`
+  margin-left: 10px;
   justify-content: center;
   background-color: ${({theme}) => theme.colors.shape};
   height: ${Dimensions.get('window').height / 12}px;

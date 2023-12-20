@@ -11,6 +11,8 @@ interface Props {
   buttonText?: string;
   onButtonPress?: () => void;
   onBackPress?: () => void;
+  rightContent?: React.ReactNode;
+  onRightContentPress?: () => void;
 }
 
 export function Screen({
@@ -18,6 +20,8 @@ export function Screen({
   onButtonPress,
   buttonText,
   onBackPress,
+  rightContent,
+  onRightContentPress,
 }: Props) {
   const {colors} = useTheme();
   const navigation = useNavigation();
@@ -42,6 +46,9 @@ export function Screen({
       <S.Header>
         <S.IconButton onPress={_onBackPress}>
           <Icon size={28} color={colors.text} />
+        </S.IconButton>
+        <S.IconButton onPress={onRightContentPress}>
+          {rightContent}
         </S.IconButton>
       </S.Header>
 
