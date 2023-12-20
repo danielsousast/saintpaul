@@ -2,7 +2,6 @@ import React from 'react';
 import * as S from './QuizItemStyles';
 import {Icon, IconNames, MathFormula} from '@/presentation/components';
 import {useTheme} from 'styled-components/native';
-import {LetterAIcon} from '@/presentation/components/Icon/LetterAIcon';
 
 interface QuizItemProps {
   option: {answer: string};
@@ -21,7 +20,7 @@ export function QuizItem({option, index, selected, onPress}: QuizItemProps) {
       <Icon
         size={40}
         name={mapIndexToLetter(index)}
-        color={selected ? colors.primary : colors.text}
+        color={selected ? colors.primary : colors.gray}
       />
       <MathFormula formula={option.answer} color={colors.shape} />
     </S.QuizItemWrapper>

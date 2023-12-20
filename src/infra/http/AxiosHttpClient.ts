@@ -1,5 +1,5 @@
 import axios, {AxiosError, AxiosResponse} from 'axios';
-import {IHttpClient, HttpRequest, HttpResponse} from './IHttpClient';
+import {IHttpClient, HttpRequest, HttpResponse} from './HttpClient';
 
 export class AxiosHttpClient implements IHttpClient {
   async request(params: HttpRequest): Promise<HttpResponse> {

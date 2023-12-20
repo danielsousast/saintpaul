@@ -4,5 +4,6 @@ export const darkTheme = {
     shape: '#262B35',
     text: '#fff',
     primary: '#694AFF',
+    gray: '#BFBFBF',
   },
 };

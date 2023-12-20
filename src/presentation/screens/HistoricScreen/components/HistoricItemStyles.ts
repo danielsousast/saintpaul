@@ -6,7 +6,7 @@ export const ItemContainer = styled.View`
   border: 2px solid ${props => props.theme.colors.shape};
   background-color: ${props => props.theme.colors.shape};
   border-radius: 8px;
-  padding: 10px 16px;
+  padding: 12px 16px;
   margin-bottom: 10px;
   overflow: hidden;
 `;
