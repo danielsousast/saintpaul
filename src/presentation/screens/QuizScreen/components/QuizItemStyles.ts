@@ -13,10 +13,10 @@ export const QuizItemWrapper = styled.TouchableOpacity<WrapperProps>`
   padding: 10px;
   margin-bottom: 10px;
   overflow: hidden;
-  ${props =>
-    props.selected &&
+  ${({selected, theme}) =>
+    selected &&
     css`
-      border-color: #6a5ae0;
+      border-color: ${theme.colors.primary};
       border-width: 2px;
     `};
 `;
