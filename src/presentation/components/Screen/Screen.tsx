@@ -45,7 +45,7 @@ export function Screen({
       }}>
       <S.Header>
         <S.IconButton onPress={_onBackPress}>
-          <Icon size={28} color={colors.text} />
+          <Icon name="arrowLeft" size={28} color={colors.text} />
         </S.IconButton>
         <S.IconButton onPress={onRightContentPress}>
           {rightContent}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
-import styled from 'styled-components/native';
+import styled, {useTheme} from 'styled-components/native';
 import {MathJaxSvg} from 'react-native-mathjax-html-to-svg';
 
 interface MathFormulaProps {
@@ -9,10 +9,11 @@ interface MathFormulaProps {
 }
 
 export function MathFormula({formula, color = '#fff'}: MathFormulaProps) {
+  const {colors} = useTheme();
   return (
     <Wrapper>
       <MathJaxSvg
-        color="white"
+        color={colors.text}
         fontSize={18}
         style={{
           backgroundColor: color,

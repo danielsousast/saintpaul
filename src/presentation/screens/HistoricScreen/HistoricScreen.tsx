@@ -5,31 +5,6 @@ import {HistoricItem} from './components/HistoricItem';
 import {Quiz} from '@/modules/quiz';
 import {useHistoricStore} from '@/main/state/useHistoricStore';
 
-// fake quiz history
-const fakeQuizHistory: Quiz[] = [
-  {
-    id: 1,
-    date: '2021-01-01',
-    correctAnswers: 5,
-    totalQuestions: 10,
-    score: 30,
-  },
-  {
-    id: 2,
-    date: '2021-01-01',
-    correctAnswers: 5,
-    totalQuestions: 10,
-    score: 50,
-  },
-  {
-    id: 3,
-    date: '2021-01-01',
-    correctAnswers: 5,
-    totalQuestions: 10,
-    score: 90,
-  },
-];
-
 const HistoricScreen = () => {
   const {quizes} = useHistoricStore();
   function renderItem({item}: ListRenderItemInfo<Quiz>) {
