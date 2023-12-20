@@ -62,7 +62,7 @@ export function useQuizScreen() {
       const selectedOption = question.options.find(
         option => option.key === selectedOptions[question.id],
       );
-      console.log(userAnswer);
+
       if (userAnswer !== undefined && selectedOption?.correct) {
         score++;
       }

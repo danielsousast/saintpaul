@@ -9,7 +9,6 @@ export function useQuestions() {
   async function getQuestions() {
     setLoading(true);
     const response = await QuestionService.getQuestions();
-    console.log(response);
     setQuestions(response.body);
     setLoading(false);
   }
