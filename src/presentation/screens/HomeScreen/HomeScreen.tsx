@@ -12,7 +12,7 @@ export function HomeScreen({navigation}: AppScreenProps<NavRoutes.Home>) {
   }
 
   function onMenuPress() {
-    navigation.navigate(NavRoutes.Historic);
+    navigation.toggleDrawer();
   }
 
   return (

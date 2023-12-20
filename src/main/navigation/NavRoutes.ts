@@ -3,4 +3,5 @@ export enum NavRoutes {
   Quiz = 'Quiz',
   Result = 'Result',
   Historic = 'Historic',
+  Settings = 'Settings',
 }
