@@ -5,7 +5,7 @@ import {NavRoutes} from '@/main/navigation/NavRoutes';
 import {AppStackParamList} from '@/main/navigation/NavigationTypes';
 
 export function useQuizScreen() {
-  const {questions} = useQuestions();
+  const {questions, isLoading} = useQuestions();
   const {reset} = useNavigation<NavigationProp<AppStackParamList>>();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState({} as any);
@@ -80,5 +80,6 @@ export function useQuizScreen() {
     selectedOptions,
     calculateResults,
     isTheLastQuesstion,
+    isLoading,
   };
 }

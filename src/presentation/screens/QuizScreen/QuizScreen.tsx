@@ -3,10 +3,12 @@ import * as S from './Quizstyles';
 import {QuizItem} from './components/QuizItem';
 import {useQuizScreen} from './useQuizScreen';
 import {Screen, Button} from '@/presentation/components';
+import {QuizSkeleton} from './components/Skeleton';
 
 export default function QuizScreen() {
   const {
     questions,
+    isLoading,
     currentQuestion,
     currentQuestionIndex,
     selectedOptions,
@@ -20,32 +22,32 @@ export default function QuizScreen() {
 
   return (
     <Screen>
-      <S.QuizTitle>
-        {`Questão ${currentQuestionIndex + 1} de ${questions?.length}`}
-      </S.QuizTitle>
-      <S.ContentWrapper>
-        <S.QuizQuestion>{currentQuestion?.question || ''}</S.QuizQuestion>
-        {currentQuestion?.options.map((option, index) => {
-          const questionId = currentQuestion.id;
-          return (
-            <QuizItem
-              selected={selectedOptions[questionId] === option.key}
-              key={option.answer}
-              option={option}
-              index={index}
-              onPress={() =>
-                handleAnswerQuestion(
-                  questionId as unknown as number,
-                  option.key,
-                )
-              }
-            />
-          );
-        })}
-      </S.ContentWrapper>
-      <Button onPress={handleNextQuestion} disabled={disbledNextButton}>
-        {isTheLastQuesstion ? 'Finalizar' : 'Próxima'}
-      </Button>
+      <QuizSkeleton isLoading={isLoading} />
+      {!isLoading && (
+        <>
+          <S.QuizTitle>
+            {`Questão ${currentQuestionIndex + 1} de ${questions?.length}`}
+          </S.QuizTitle>
+          <S.ContentWrapper>
+            <S.QuizQuestion>{currentQuestion?.question || ''}</S.QuizQuestion>
+            {currentQuestion?.options.map((option, index) => {
+              const questionId = currentQuestion.id as unknown as number;
+              return (
+                <QuizItem
+                  selected={selectedOptions[questionId] === option.key}
+                  key={option.answer}
+                  option={option}
+                  index={index}
+                  onPress={() => handleAnswerQuestion(questionId, option.key)}
+                />
+              );
+            })}
+          </S.ContentWrapper>
+          <Button onPress={handleNextQuestion} disabled={disbledNextButton}>
+            {isTheLastQuesstion ? 'Finalizar' : 'Próxima'}
+          </Button>
+        </>
+      )}
     </Screen>
   );
 }

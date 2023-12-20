@@ -4,7 +4,7 @@ const httpClient = new AxiosHttpClient();
 
 const getQuestions = async () => {
   const response = await httpClient.request({
-    url: 'https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean',
+    url: 'https://api.mockfly.dev/mocks/f95d76ff-cc4b-43c1-b97a-b035fe289669/questions',
     method: 'get',
   });
   return response;

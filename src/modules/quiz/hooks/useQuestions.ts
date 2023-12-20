@@ -4,7 +4,7 @@ import {Question} from '../interfaces';
 
 export function useQuestions() {
   const [questions, setQuestions] = useState([] as Question[]);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   async function getQuestions() {
     setLoading(true);
@@ -20,6 +20,6 @@ export function useQuestions() {
 
   return {
     questions,
-    loading,
+    isLoading,
   };
 }

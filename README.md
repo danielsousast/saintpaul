@@ -62,7 +62,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![SaintPaul Quiz][product-screenshot]](https://example.com)
 
 Este projeto simula um quiz de multipla escolha. Foi desenvolvido com React native e typescript.
 
@@ -70,7 +70,7 @@ Este projeto simula um quiz de multipla escolha. Foi desenvolvido com React nati
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section should list any major frameworks/libraries used to bootstrap your project.
 
 - [![React][React.js]][React-url]
 
@@ -167,7 +167,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Daniel Sousa - [@danielsousast](https://www.linkedin.com/in/danielsousast/) - email@example.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
