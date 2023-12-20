@@ -3,6 +3,7 @@ import {Screen} from '@/presentation/components';
 import {FlatList, ListRenderItemInfo} from 'react-native';
 import {HistoricItem} from './components/HistoricItem';
 import {Quiz} from '@/modules/quiz';
+import {useHistoricStore} from '@/main/state/useHistoricStore';
 
 // fake quiz history
 const fakeQuizHistory: Quiz[] = [
@@ -30,12 +31,13 @@ const fakeQuizHistory: Quiz[] = [
 ];
 
 const HistoricScreen = () => {
+  const {quizes} = useHistoricStore();
   function renderItem({item}: ListRenderItemInfo<Quiz>) {
     return <HistoricItem quiz={item} />;
   }
   return (
     <Screen>
-      <FlatList data={fakeQuizHistory} renderItem={renderItem} />
+      <FlatList data={quizes} renderItem={renderItem} />
     </Screen>
   );
 };

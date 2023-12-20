@@ -26,7 +26,8 @@
     "react-native-skeleton-placeholder": "^5.2.4",
     "react-native-svg": "^14.1.0",
     "react-native-webview": "^13.6.3",
-    "styled-components": "^6.1.1"
+    "styled-components": "^6.1.1",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

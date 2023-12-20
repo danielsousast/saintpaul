@@ -12,8 +12,6 @@ export class AxiosHttpClient implements IHttpClient {
         headers: params.headers,
         method: params.method,
       });
-
-      console.log('axiosResponse', axiosResponse);
     } catch (error) {
       //ErrorLog.log('AxiosHttpClient.post', error as Error);
       axiosResponse = (error as AxiosError).response as any;
