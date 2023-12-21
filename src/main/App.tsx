@@ -6,6 +6,7 @@ import {useAppTheme} from './state/useAppThemeStore';
 
 export default function App() {
   const {theme} = useAppTheme();
+
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <MainNavigator />

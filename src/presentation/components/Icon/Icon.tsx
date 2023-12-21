@@ -6,12 +6,16 @@ import RegularIcon from './RegularIcon';
 import {LetterAIcon} from './LetterAIcon';
 import {LetterBIcon} from './LetterBIcon';
 import {LetterCIcon} from './LetterCIcon';
+import {HistoricIcon} from './HistoricIcon';
+import {HomeIcon} from './HomeIcon';
 
 const iconMap = {
   arrowLeft: ArrowLeftIcon,
   happy: HappyIcon,
   sad: SadIcon,
   regular: RegularIcon,
+  historic: HistoricIcon,
+  home: HomeIcon,
   letterA: LetterAIcon,
   letterB: LetterBIcon,
   letterC: LetterCIcon,

@@ -8,7 +8,7 @@ export const ResultBox = styled.View`
   width: ${BOX_SIZE}px;
   height: ${BOX_SIZE}px;
   border-radius: 8px;
-  background-color: #ff8fa2;
+  background-color: ${props => props.theme.colors.shape};
   justify-content: center;
   align-items: center;
 `;

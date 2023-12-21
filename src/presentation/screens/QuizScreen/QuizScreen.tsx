@@ -5,7 +5,7 @@ import {useQuizScreen} from './useQuizScreen';
 import {Screen, Button} from '@/presentation/components';
 import {QuizSkeleton} from './components/Skeleton';
 
-export default function QuizScreen() {
+export function QuizScreen() {
   const {
     questions,
     isLoading,
@@ -21,7 +21,7 @@ export default function QuizScreen() {
     !selectedOptions[currentQuestion?.id as unknown as number];
 
   return (
-    <Screen>
+    <Screen canGoBack>
       <QuizSkeleton isLoading={isLoading} />
       {!isLoading && (
         <>

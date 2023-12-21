@@ -8,6 +8,7 @@ export interface AppStackParamList {
     score: number;
   };
   [NavRoutes.Historic]: undefined;
+  [NavRoutes.Settings]: undefined;
 }
 
 export type AppScreenProps<RouteName extends keyof AppStackParamList> =

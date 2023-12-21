@@ -14,7 +14,7 @@ interface State {
 export const useAppTheme = create<State>()(
   persist(
     set => ({
-      theme: 'light',
+      theme: 'dark',
       setTheme: (newTheme: ThemeStatus) => set({theme: newTheme}),
       toggleTheme: () => {
         set(state => {

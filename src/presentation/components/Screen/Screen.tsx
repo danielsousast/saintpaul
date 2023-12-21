@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {useAppSafeArea} from '@/presentation/hooks';
@@ -10,18 +11,18 @@ interface Props {
   children: React.ReactNode;
   buttonText?: string;
   onButtonPress?: () => void;
-  onBackPress?: () => void;
   rightContent?: React.ReactNode;
   onRightContentPress?: () => void;
+  canGoBack?: boolean;
 }
 
 export function Screen({
   children,
   onButtonPress,
   buttonText,
-  onBackPress,
   rightContent,
   onRightContentPress,
+  canGoBack = false,
 }: Props) {
   const {colors} = useTheme();
   const navigation = useNavigation();
@@ -31,11 +32,8 @@ export function Screen({
     onButtonPress && onButtonPress();
   }
 
-  function _onBackPress() {
-    if (!onBackPress) {
-      navigation.goBack();
-    }
-    onBackPress && onBackPress();
+  function onBackPress() {
+    navigation.goBack();
   }
 
   return (
@@ -44,10 +42,16 @@ export function Screen({
         paddingTop: top,
       }}>
       <S.Header>
-        <S.IconButton onPress={_onBackPress}>
-          <Icon name="arrowLeft" size={28} color={colors.text} />
-        </S.IconButton>
-        <S.IconButton onPress={onRightContentPress}>
+        {!!canGoBack && (
+          <S.IconButton onPress={onBackPress}>
+            <Icon name="arrowLeft" size={28} color={colors.text} />
+          </S.IconButton>
+        )}
+        <S.IconButton
+          onPress={onRightContentPress}
+          style={{
+            marginLeft: canGoBack ? undefined : 'auto',
+          }}>
           {rightContent}
         </S.IconButton>
       </S.Header>

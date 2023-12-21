@@ -1,22 +1,34 @@
 import React from 'react';
-import HistoricScreen from '@/presentation/screens/HistoricScreen/HistoricScreen';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+
+import {
+  DrawerContentComponentProps,
+  createDrawerNavigator,
+} from '@react-navigation/drawer';
 import {NavRoutes} from './NavRoutes';
-import {HomeScreen} from '@/presentation/screens/HomeScreen/HomeScreen';
+import {HomeScreen, HistoricScreen} from '@/presentation/screens';
+import CustomDrawerContent from './CustomDrawer/CustomDrawer';
+import {useTheme} from 'styled-components/native';
 
 const Drawer = createDrawerNavigator();
 
 export function DrawerNavigator() {
+  const {colors} = useTheme();
+  const renderDrawer = (props: DrawerContentComponentProps) => {
+    return <CustomDrawerContent {...props} />;
+  };
   return (
     <Drawer.Navigator
-      screenOptions={{
+      drawerContent={renderDrawer}
+      screenOptions={({}) => ({
         swipeEnabled: true,
-
         headerShown: false,
-      }}>
+        drawerStyle: {
+          backgroundColor: colors.background,
+        },
+      })}>
       <Drawer.Screen
         name={NavRoutes.Home}
-        component={HomeScreen}
+        component={HomeScreen as any}
         options={{
           title: 'Início',
         }}

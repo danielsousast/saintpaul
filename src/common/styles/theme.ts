@@ -2,7 +2,7 @@ export const darkTheme = {
   colors: {
     background: '#181A20',
     shape: '#262B35',
-    text: '#fff',
+    text: '#F0F0F0',
     primary: '#694AFF',
     gray: '#BFBFBF',
     success: '#63c76ba9',

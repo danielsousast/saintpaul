@@ -3,8 +3,12 @@ import {useQuestions} from '@/modules/quiz';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {NavRoutes} from '@/main/navigation/NavRoutes';
 import {AppStackParamList} from '@/main/navigation/NavigationTypes';
+import {useHistoricStore} from '@/main/state/useHistoricStore';
+
+const TOTAL_QUESTIONS = 10;
 
 export function useQuizScreen() {
+  const {setQuiz} = useHistoricStore();
   const {questions, isLoading} = useQuestions();
   const {reset} = useNavigation<NavigationProp<AppStackParamList>>();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -18,11 +22,18 @@ export function useQuizScreen() {
     }
     if (currentQuestionIndex === questions.length - 1) {
       const score = calculateResults();
+      setQuiz({
+        id: Math.random(),
+        date: new Date().toISOString(),
+        correctAnswers: score,
+        totalQuestions: TOTAL_QUESTIONS,
+        score: (score / TOTAL_QUESTIONS) * 100,
+      });
       reset({
         index: 0,
         routes: [
           {
-            name: NavRoutes.Home,
+            name: NavRoutes.Settings,
           },
           {
             name: NavRoutes.Result,

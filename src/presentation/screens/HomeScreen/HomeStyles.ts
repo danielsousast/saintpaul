@@ -1,10 +1,29 @@
 import styled from 'styled-components/native';
 
 export const ImageContainer = styled.View`
-  flex: 1;
-  height: 100%;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
-  margin-bottom: 20px;
+  padding: 50px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: ${({theme}) => theme.colors.shape};
+`;
+
+export const Content = styled.View`
+  flex: 1;
+  justify-content: flex-start;
+`;
+
+export const Title = styled.Text`
+  font-size: 22px;
+  font-weight: bold;
+  color: ${({theme}) => theme.colors.text};
+`;
+
+export const Description = styled.Text`
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 10px;
+  font-weight: 300;
+  color: ${({theme}) => theme.colors.text};
 `;
