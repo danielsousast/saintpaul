@@ -4,17 +4,17 @@ import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-
-import {Content, ProfileContent, DrawerItems} from './DrawerStyles';
-import CustomDrawerItem from './DrawerItem';
+import {getFocusedRouteNameFromRoute, useRoute} from '@react-navigation/native';
+import {CustomDrawerItem} from './DrawerItem';
 import {useTheme} from 'styled-components';
 import {ToggleTheme} from './ToggleTheme';
-import {NavRoutes} from '../NavRoutes';
-import {getFocusedRouteNameFromRoute, useRoute} from '@react-navigation/native';
+import {NavRoutes} from '../../utils/NavRoutes';
+import * as S from './DrawerStyles';
 
 const CustomDrawerContent = ({navigation}: DrawerContentComponentProps) => {
   const route = useRoute();
   const {colors} = useTheme();
+
   return (
     <DrawerContentScrollView
       scrollEnabled={true}
@@ -22,15 +22,9 @@ const CustomDrawerContent = ({navigation}: DrawerContentComponentProps) => {
         flex: 1,
         backgroundColor: colors.background,
       }}>
-      <Content>
-        <ProfileContent>
-          {
-            //<Avatar source={dummyData.myProfile?.profile_image} />
-          }
-        </ProfileContent>
-        <DrawerItems>
+      <S.Content>
+        <S.DrawerItems>
           <ToggleTheme />
-
           <CustomDrawerItem
             label="Home"
             icon="home"
@@ -43,8 +37,8 @@ const CustomDrawerContent = ({navigation}: DrawerContentComponentProps) => {
             active={getFocusedRouteNameFromRoute(route) === NavRoutes.Historic}
             onPress={() => navigation.navigate(NavRoutes.Historic)}
           />
-        </DrawerItems>
-      </Content>
+        </S.DrawerItems>
+      </S.Content>
     </DrawerContentScrollView>
   );
 };

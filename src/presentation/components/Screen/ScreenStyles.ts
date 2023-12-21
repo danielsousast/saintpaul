@@ -7,7 +7,18 @@ export const Container = styled.View`
   background-color: ${props => props.theme.colors.background};
 `;
 
-export const Content = styled.View`
+export const ScrollContainer = styled.ScrollView`
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 40px;
+  background-color: ${props => props.theme.colors.background};
+`;
+
+export const ViewContent = styled.View`
+  flex: 1;
+`;
+
+export const ScrollContent = styled.ScrollView`
   flex: 1;
 `;
 

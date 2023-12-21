@@ -97,12 +97,6 @@ export const Icon = styled.Image`
   tint-color: ${COLORS.white};
 `;
 
-export const ProfileContent = styled.TouchableOpacity`
-  flex-direction: row;
-  margin-top: ${SIZES.radius}px;
-  align-items: center;
-`;
-
 export const Avatar = styled.Image`
   width: 50px;
   height: 50px;

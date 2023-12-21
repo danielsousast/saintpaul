@@ -1,8 +1,7 @@
 import React from 'react';
-
-import * as S from './DrawerStyles';
-import {Icon, IconNames} from '@/presentation/components';
 import {useTheme} from 'styled-components/native';
+import {Icon, IconNames} from '@/presentation/components';
+import * as S from './DrawerStyles';
 
 interface ComponentProps {
   label: string;
@@ -11,13 +10,14 @@ interface ComponentProps {
   icon: IconNames;
 }
 
-const CustomDrawerItem: React.FC<ComponentProps> = ({
+export const CustomDrawerItem: React.FC<ComponentProps> = ({
   label,
   onPress,
   active = false,
   icon,
 }) => {
   const {colors} = useTheme();
+
   return (
     <S.DrawerItemContainer onPress={onPress} active={active}>
       <Icon name={icon} color={active ? colors.primary : colors.text} />
@@ -25,5 +25,3 @@ const CustomDrawerItem: React.FC<ComponentProps> = ({
     </S.DrawerItemContainer>
   );
 };
-
-export default CustomDrawerItem;

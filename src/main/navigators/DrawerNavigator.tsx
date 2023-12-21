@@ -1,13 +1,12 @@
 import React from 'react';
-
 import {
   DrawerContentComponentProps,
   createDrawerNavigator,
 } from '@react-navigation/drawer';
-import {NavRoutes} from './NavRoutes';
+import {useTheme} from 'styled-components/native';
 import {HomeScreen, HistoricScreen} from '@/presentation/screens';
 import CustomDrawerContent from './CustomDrawer/CustomDrawer';
-import {useTheme} from 'styled-components/native';
+import {NavRoutes} from '../utils/NavRoutes';
 
 const Drawer = createDrawerNavigator();
 
@@ -26,20 +25,8 @@ export function DrawerNavigator() {
           backgroundColor: colors.background,
         },
       })}>
-      <Drawer.Screen
-        name={NavRoutes.Home}
-        component={HomeScreen as any}
-        options={{
-          title: 'Início',
-        }}
-      />
-      <Drawer.Screen
-        name={NavRoutes.Historic}
-        component={HistoricScreen}
-        options={{
-          title: 'Histórico',
-        }}
-      />
+      <Drawer.Screen name={NavRoutes.Home} component={HomeScreen as any} />
+      <Drawer.Screen name={NavRoutes.Historic} component={HistoricScreen} />
     </Drawer.Navigator>
   );
 }

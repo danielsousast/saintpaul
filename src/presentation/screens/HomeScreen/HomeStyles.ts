@@ -23,7 +23,7 @@ export const Title = styled.Text`
 export const Description = styled.Text`
   font-size: 18px;
   line-height: 22px;
-  margin-top: 10px;
+  margin: 20px 0 40px;
   font-weight: 300;
   color: ${({theme}) => theme.colors.text};
 `;

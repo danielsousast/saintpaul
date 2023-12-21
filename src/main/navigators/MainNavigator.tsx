@@ -1,9 +1,9 @@
 import React from 'react';
-import {ResultScreen, QuizScreen} from '@/presentation/screens';
 import {NavigationContainer} from '@react-navigation/native';
+import {ResultScreen, QuizScreen} from '@/presentation/screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {NavRoutes} from './NavRoutes';
 import {DrawerNavigator} from './DrawerNavigator';
+import {NavRoutes} from '../utils/NavRoutes';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,7 +14,6 @@ const MainNavigator: React.FC = () => {
         screenOptions={{
           headerShown: false,
         }}>
-        {/* @ts-ignore */}
         <Stack.Screen name={NavRoutes.Settings} component={DrawerNavigator} />
         <Stack.Screen name={NavRoutes.Quiz} component={QuizScreen} />
         {/* @ts-ignore */}

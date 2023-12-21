@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './ResultStyles';
 import {Screen, ResultIllustration} from '@/presentation/components';
-import {AppScreenProps, NavRoutes} from '@/main/navigation';
+import {AppScreenProps, NavRoutes} from '@/main';
 import {useTheme} from 'styled-components/native';
 
 const TOTAL_QUESTIONS = 10;

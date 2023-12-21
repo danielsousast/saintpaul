@@ -1,8 +1,8 @@
 import {useCallback, useMemo, useState} from 'react';
 import {useQuestions} from '@/modules/quiz';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {NavRoutes} from '@/main/navigation/NavRoutes';
-import {AppStackParamList} from '@/main/navigation/NavigationTypes';
+import {NavRoutes} from '@/main/utils/NavRoutes';
+import {AppStackParamList} from '@/main/utils/NavigationTypes';
 import {useHistoricStore} from '@/main/state/useHistoricStore';
 
 const TOTAL_QUESTIONS = 10;

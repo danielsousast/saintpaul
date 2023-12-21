@@ -1,5 +1,5 @@
 import React from 'react';
-import MainNavigator from './navigation/MainNavigator';
+import MainNavigator from './navigators/MainNavigator';
 import {ThemeProvider} from 'styled-components/native';
 import {darkTheme, lightTheme} from '@/common/styles/theme';
 import {useAppTheme} from './state/useAppThemeStore';

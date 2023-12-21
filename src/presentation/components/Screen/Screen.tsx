@@ -14,6 +14,7 @@ interface Props {
   rightContent?: React.ReactNode;
   onRightContentPress?: () => void;
   canGoBack?: boolean;
+  scrollable?: boolean;
 }
 
 export function Screen({
@@ -23,10 +24,13 @@ export function Screen({
   rightContent,
   onRightContentPress,
   canGoBack = false,
+  scrollable = false,
 }: Props) {
   const {colors} = useTheme();
   const navigation = useNavigation();
   const {top} = useAppSafeArea();
+
+  const Content = scrollable ? S.ScrollContent : S.ViewContent;
 
   function _onButtonPress() {
     onButtonPress && onButtonPress();
@@ -56,7 +60,7 @@ export function Screen({
         </S.IconButton>
       </S.Header>
 
-      <S.Content>{children}</S.Content>
+      <Content>{children}</Content>
       {!!buttonText && <Button onPress={_onButtonPress}>{buttonText}</Button>}
     </S.Container>
   );

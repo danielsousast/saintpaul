@@ -22,6 +22,7 @@ export const Description = styled.Text`
 
 export const Label = styled.Text`
   font-size: 12px;
+  margin-top: 5px;
   color: ${props => props.theme.colors.text};
 `;
 
