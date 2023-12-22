@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {Quiz} from '@/modules/quiz/interfaces';
-import {Icon, IconNames} from '@/presentation/components';
+import {Icon, IconNames, Text, ViewContent} from '@/presentation/components';
 import * as S from './HistoricItemStyles';
 import {DefaultTheme, useTheme} from 'styled-components/native';
 import {formatDate} from '@/common/utils/dateUtils';
@@ -22,11 +22,11 @@ export function HistoricItem({quiz}: Props) {
       <S.IconWrapper>
         <Icon name={iconName} color={iconColor} size={45} />
       </S.IconWrapper>
-      <S.Content>
-        <S.Description>Matematica</S.Description>
-        <S.Label>{formattedDate}</S.Label>
-      </S.Content>
-      <S.Value>{quiz.score}%</S.Value>
+      <ViewContent>
+        <Text variant="body">Matematica</Text>
+        <Text variant="label">{formattedDate}</Text>
+      </ViewContent>
+      <Text>{quiz.score}%</Text>
     </S.ItemContainer>
   );
 }

@@ -23,14 +23,3 @@ export const Row = styled.View`
 export const RightContent = styled.View``;
 
 export const LeftContent = styled.View``;
-
-export const Label = styled.Text`
-  font-size: 18px;
-  color: ${props => props.theme.colors.text};
-`;
-
-export const Value = styled.Text`
-  font-size: 22px;
-  font-weight: bold;
-  color: ${props => props.theme.colors.text};
-`;

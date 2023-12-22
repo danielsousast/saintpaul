@@ -1,3 +1,10 @@
+const fonts = {
+  light: 'Roboto-Light',
+  regular: 'Roboto-Regular',
+  medium: 'Roboto-Medium',
+  bold: 'Roboto-Bold',
+};
+
 export const darkTheme = {
   colors: {
     background: '#181A20',
@@ -9,6 +16,7 @@ export const darkTheme = {
     warning: '#d2b463',
     error: '#d76d61',
   },
+  fonts,
 };
 
 export const lightTheme = {
@@ -22,4 +30,5 @@ export const lightTheme = {
     warning: '#d2b463',
     error: '#d76d61',
   },
+  fonts,
 };

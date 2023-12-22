@@ -14,13 +14,18 @@ export function useQuizScreen() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState({} as any);
   const [selectedOptions, setSelectedOptions] = useState({} as any);
-  const [isTheLastQuesstion, setIsTheLastQuesstion] = useState(false);
+  const [showNextText, setShowNextText] = useState(false);
 
   function handleNextQuestion() {
-    if (currentQuestionIndex === questions.length - 2) {
-      setIsTheLastQuesstion(true);
+    const questionsLength = questions.length;
+    const isPenultimateQuestion = currentQuestionIndex === questionsLength - 2;
+    const isLastQuestion = currentQuestionIndex === questionsLength - 1;
+    const hasNextQuestion = currentQuestionIndex < questionsLength;
+
+    if (isPenultimateQuestion) {
+      setShowNextText(true);
     }
-    if (currentQuestionIndex === questions.length - 1) {
+    if (isLastQuestion) {
       const score = calculateResults();
       setQuiz({
         id: Math.random(),
@@ -45,7 +50,7 @@ export function useQuizScreen() {
       });
       return;
     }
-    if (currentQuestionIndex < questions.length) {
+    if (hasNextQuestion) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
   }
@@ -90,7 +95,7 @@ export function useQuizScreen() {
     userAnswers,
     selectedOptions,
     calculateResults,
-    isTheLastQuesstion,
+    showNextText,
     isLoading,
   };
 }

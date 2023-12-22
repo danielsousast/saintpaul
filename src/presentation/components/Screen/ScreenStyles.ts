@@ -14,10 +14,6 @@ export const ScrollContainer = styled.ScrollView`
   background-color: ${props => props.theme.colors.background};
 `;
 
-export const ViewContent = styled.View`
-  flex: 1;
-`;
-
 export const ScrollContent = styled.ScrollView`
   flex: 1;
 `;

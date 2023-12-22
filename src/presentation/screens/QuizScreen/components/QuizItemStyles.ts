@@ -20,9 +20,3 @@ export const QuizItemWrapper = styled.TouchableOpacity<WrapperProps>`
       border-width: 2px;
     `};
 `;
-
-export const QuizItemText = styled.Text`
-  font-size: 18px;
-  font-weight: bold;
-  color: ${props => props.theme.colors.text};
-`;

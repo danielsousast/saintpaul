@@ -1,8 +1,7 @@
 import React from 'react';
-import * as S from './Quizstyles';
 import {QuizItem} from './components/QuizItem';
 import {useQuizScreen} from './useQuizScreen';
-import {Screen, Button} from '@/presentation/components';
+import {Screen, Button, Text, ViewContent} from '@/presentation/components';
 import {QuizSkeleton} from './components/Skeleton';
 
 export function QuizScreen() {
@@ -14,7 +13,7 @@ export function QuizScreen() {
     selectedOptions,
     handleAnswerQuestion,
     handleNextQuestion,
-    isTheLastQuesstion,
+    showNextText,
   } = useQuizScreen();
 
   const disbledNextButton =
@@ -25,11 +24,13 @@ export function QuizScreen() {
       <QuizSkeleton isLoading={isLoading} />
       {!isLoading && (
         <>
-          <S.QuizTitle>
+          <Text variant="caption" align="center" mb={20}>
             {`Questão ${currentQuestionIndex + 1} de ${questions?.length}`}
-          </S.QuizTitle>
-          <S.ContentWrapper>
-            <S.QuizQuestion>{currentQuestion?.question || ''}</S.QuizQuestion>
+          </Text>
+          <ViewContent>
+            <Text mb={20} variant="subtitle">
+              {currentQuestion?.question || ''}
+            </Text>
             {currentQuestion?.options.map((option, index) => {
               const questionId = currentQuestion.id as unknown as number;
               return (
@@ -42,9 +43,9 @@ export function QuizScreen() {
                 />
               );
             })}
-          </S.ContentWrapper>
+          </ViewContent>
           <Button onPress={handleNextQuestion} disabled={disbledNextButton}>
-            {isTheLastQuesstion ? 'Finalizar' : 'Próxima'}
+            {showNextText ? 'Finalizar' : 'Próxima'}
           </Button>
         </>
       )}

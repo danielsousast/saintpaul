@@ -11,27 +11,6 @@ export const ItemContainer = styled.View`
   overflow: hidden;
 `;
 
-export const Content = styled.View`
-  flex: 1;
-`;
-
-export const Description = styled.Text`
-  font-size: 16px;
-  color: ${props => props.theme.colors.text};
-`;
-
-export const Label = styled.Text`
-  font-size: 12px;
-  margin-top: 5px;
-  color: ${props => props.theme.colors.text};
-`;
-
-export const Value = styled.Text`
-  font-size: 18px;
-  font-weight: bold;
-  color: ${props => props.theme.colors.text};
-`;
-
 export const IconWrapper = styled.View`
   justify-content: center;
   align-items: center;

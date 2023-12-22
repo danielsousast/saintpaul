@@ -7,10 +7,3 @@ export const ButtonWrapper = styled.TouchableOpacity<{disabled?: boolean}>`
   background-color: ${props => props.theme.colors.primary};
   opacity: ${props => (props.disabled ? 0.7 : 1)};
 `;
-
-export const ButtonText = styled.Text`
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-`;

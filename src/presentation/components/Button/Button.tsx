@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './ButtonStyles';
+import {Text} from '../Text/Text';
 
 interface ButtonProps {
   onPress: () => void;
@@ -10,7 +11,9 @@ interface ButtonProps {
 export const Button = ({children, onPress, disabled}: ButtonProps) => {
   return (
     <S.ButtonWrapper onPress={onPress} disabled={disabled}>
-      <S.ButtonText>{children}</S.ButtonText>
+      <Text variant="button" align="center">
+        {children}
+      </Text>
     </S.ButtonWrapper>
   );
 };

@@ -6,6 +6,7 @@ import {useTheme} from 'styled-components/native';
 import {Button} from '../Button/Button';
 import {Icon} from '../Icon/Icon';
 import * as S from './ScreenStyles';
+import {ViewContent} from '../Layout/Layout';
 
 interface Props {
   children: React.ReactNode;
@@ -30,7 +31,7 @@ export function Screen({
   const navigation = useNavigation();
   const {top} = useAppSafeArea();
 
-  const Content = scrollable ? S.ScrollContent : S.ViewContent;
+  const Content = scrollable ? S.ScrollContent : ViewContent;
 
   function _onButtonPress() {
     onButtonPress && onButtonPress();

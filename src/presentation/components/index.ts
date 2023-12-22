@@ -5,3 +5,5 @@ export * from './Illustration/ResultIllustration';
 export * from './Illustration/HomeIllustration';
 export * from './Screen/Screen';
 export * from './Icon/Icon';
+export * from './Text/Text';
+export * from './Layout/Layout';

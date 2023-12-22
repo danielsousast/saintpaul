@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './ResultStyles';
-import {Screen, ResultIllustration} from '@/presentation/components';
+import {Screen, ResultIllustration, Text} from '@/presentation/components';
 import {AppScreenProps, NavRoutes} from '@/main';
 import {useTheme} from 'styled-components/native';
 
@@ -23,22 +23,16 @@ export function ResultScreen({
       </S.ResultBox>
       <S.Row>
         <S.LeftContent>
-          <S.Label>Acertos</S.Label>
-          <S.Value
-            style={{
-              color: colors.success,
-            }}>
+          <Text variant="caption">Acertos</Text>
+          <Text color={colors.success} variant="subtitle">
             {score} questões
-          </S.Value>
+          </Text>
         </S.LeftContent>
         <S.RightContent>
-          <S.Label>Incorretas</S.Label>
-          <S.Value
-            style={{
-              color: colors.error,
-            }}>
+          <Text variant="caption">Incorretas</Text>
+          <Text color={colors.error} variant="subtitle">
             {TOTAL_QUESTIONS - score} questões
-          </S.Value>
+          </Text>
         </S.RightContent>
       </S.Row>
     </Screen>
