@@ -1,4 +1,19 @@
 {
-  "name": "sanpaulapp",
-  "displayName": "sanpaulapp"
+  "name": "SaintPaul",
+  "displayName": "sanpaulapp",
+  "android": {
+    "package": "com.anonymous.sanpaulapp"
+  },
+  "ios": {
+    "bundleIdentifier": "com.anonymous.sanpaulapp"
+  },
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "78cb12a1-4dbe-4727-bfee-7da50e0cb3e0"
+      }
+    },
+    "owner": "danielsousast",
+    "slug": "saintpaul"
+  }
 }
