@@ -1,13 +1,14 @@
 import * as React from 'react';
 import {ArrowLeftIcon} from './ArrowLeftIcon';
-import HappyIcon from './HappyIcon';
-import SadIcon from './SadIcon';
-import RegularIcon from './RegularIcon';
+import {HappyIcon} from './HappyIcon';
+import {SadIcon} from './SadIcon';
+import {RegularIcon} from './RegularIcon';
 import {LetterAIcon} from './LetterAIcon';
 import {LetterBIcon} from './LetterBIcon';
 import {LetterCIcon} from './LetterCIcon';
 import {HistoricIcon} from './HistoricIcon';
 import {HomeIcon} from './HomeIcon';
+import {MenuIcon} from './MenuIcon';
 
 const iconMap = {
   arrowLeft: ArrowLeftIcon,
@@ -19,6 +20,7 @@ const iconMap = {
   letterA: LetterAIcon,
   letterB: LetterBIcon,
   letterC: LetterCIcon,
+  menu: MenuIcon,
 };
 
 export type IconNames = keyof typeof iconMap;

@@ -7,7 +7,7 @@ import {NavRoutes} from '../utils/NavRoutes';
 
 const Stack = createNativeStackNavigator();
 
-const MainNavigator: React.FC = () => {
+export const MainNavigator: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -22,5 +22,3 @@ const MainNavigator: React.FC = () => {
     </NavigationContainer>
   );
 };
-
-export default MainNavigator;

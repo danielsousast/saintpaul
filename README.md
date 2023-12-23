@@ -1,5 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-
 <a name="readme-top"></a>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -70,7 +68,7 @@ Este projeto simula um quiz de multipla escolha. Foi desenvolvido com React nati
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project.
+This section list the frameworks/libraries used to bootstrap your project.
 
 - [![React][React.js]][React-url]
 

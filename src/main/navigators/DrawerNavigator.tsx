@@ -5,20 +5,22 @@ import {
 } from '@react-navigation/drawer';
 import {useTheme} from 'styled-components/native';
 import {HomeScreen, HistoricScreen} from '@/presentation/screens';
-import CustomDrawerContent from './CustomDrawer/CustomDrawer';
+import {CustomDrawerContent} from './CustomDrawer/CustomDrawer';
 import {NavRoutes} from '../utils/NavRoutes';
 
 const Drawer = createDrawerNavigator();
 
 export function DrawerNavigator() {
   const {colors} = useTheme();
+
   const renderDrawer = (props: DrawerContentComponentProps) => {
     return <CustomDrawerContent {...props} />;
   };
+
   return (
     <Drawer.Navigator
       drawerContent={renderDrawer}
-      screenOptions={({}) => ({
+      screenOptions={() => ({
         swipeEnabled: true,
         headerShown: false,
         drawerStyle: {

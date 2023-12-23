@@ -11,7 +11,9 @@ import {ToggleTheme} from './ToggleTheme';
 import {NavRoutes} from '../../utils/NavRoutes';
 import * as S from './DrawerStyles';
 
-const CustomDrawerContent = ({navigation}: DrawerContentComponentProps) => {
+export const CustomDrawerContent = ({
+  navigation,
+}: DrawerContentComponentProps) => {
   const route = useRoute();
   const {colors} = useTheme();
 
@@ -42,5 +44,3 @@ const CustomDrawerContent = ({navigation}: DrawerContentComponentProps) => {
     </DrawerContentScrollView>
   );
 };
-
-export default CustomDrawerContent;

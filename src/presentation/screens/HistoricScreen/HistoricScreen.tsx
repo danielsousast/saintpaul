@@ -18,7 +18,9 @@ export const HistoricScreen = () => {
 
   return (
     <Screen canGoBack>
-      <Text variant="subtitle">Questionários respondidos</Text>
+      <Text variant="subtitle" mb={20}>
+        Questionários respondidos
+      </Text>
       <FlatList
         data={quizes}
         renderItem={renderItem}

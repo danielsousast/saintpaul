@@ -1,11 +1,10 @@
 import React from 'react';
-import {AppScreenProps, NavRoutes} from '@/main';
-import {Screen, HomeIllustration} from '@/presentation/components';
-import {MenuIcon} from '@/presentation/components/Icon/MenuIcon';
 import {useTheme} from 'styled-components/native';
-import * as S from './HomeStyles';
 import {DrawerContentComponentProps} from '@react-navigation/drawer';
-import {Text} from '@/presentation/components/Text/Text';
+
+import {AppScreenProps, NavRoutes} from '@/main';
+import {Screen, HomeIllustration, Icon, Text} from '@/presentation/components';
+import * as S from './HomeStyles';
 
 export function HomeScreen({
   navigation,
@@ -24,7 +23,7 @@ export function HomeScreen({
       scrollable
       onButtonPress={handleStart}
       buttonText="Resolver"
-      rightContent={<MenuIcon color={colors.text} />}
+      rightContent={<Icon name="menu" color={colors.text} />}
       onRightContentPress={onMenuPress}>
       <S.Content>
         <S.ImageContainer>
