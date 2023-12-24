@@ -19,7 +19,3 @@ export const Row = styled.View`
   justify-content: space-between;
   margin: 40px 0;
 `;
-
-export const RightContent = styled.View``;
-
-export const LeftContent = styled.View``;

@@ -3,6 +3,7 @@ import * as S from './ResultStyles';
 import {Screen, ResultIllustration, Text} from '@/presentation/components';
 import {AppScreenProps, NavRoutes} from '@/main';
 import {useTheme} from 'styled-components/native';
+import {View} from 'react-native';
 
 const TOTAL_QUESTIONS = 10;
 
@@ -22,18 +23,18 @@ export function ResultScreen({
         <ResultIllustration size={150} />
       </S.ResultBox>
       <S.Row>
-        <S.LeftContent>
+        <View>
           <Text variant="caption">Acertos</Text>
           <Text color={colors.success} variant="subtitle">
             {score} questões
           </Text>
-        </S.LeftContent>
-        <S.RightContent>
+        </View>
+        <View>
           <Text variant="caption">Incorretas</Text>
           <Text color={colors.error} variant="subtitle">
             {TOTAL_QUESTIONS - score} questões
           </Text>
-        </S.RightContent>
+        </View>
       </S.Row>
     </Screen>
   );
