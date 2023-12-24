@@ -2,15 +2,12 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
     <img src=".github/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">SaintPaul Quiz App</h3>
 
   <p align="center">
-   Aplicativo React Native que oferece uma experiência imersiva para responder questionários de matemática
-
+   Aplicativo React Native que permite responder questionários de matemática simples.
   </p>
 </div>
 
@@ -18,21 +15,21 @@
   <summary>Sumário</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o Projeto</a>
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
       <ul>
-        <li><a href="#built-with">Feito com</a></li>
+        <li><a href="#feito-com">Feito com</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Introdução</a>
+      <a href="#introdução">Introdução</a>
       <ul>
-        <li><a href="#prerequisites">Pre-requisitos</a></li>
-        <li><a href="#installation">Instalação</a></li>
+        <li><a href="#pre-requisitos">Pre-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
       </ul>
     </li>
-    <li><a href="#contributing">Contribuições</a></li>
-    <li><a href="#license">Licença</a></li>
-    <li><a href="#contact">Contato</a></li>
+    <li><a href="#contribuições">Contribuições</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ol>
 </details>
 
@@ -40,7 +37,7 @@
 
 <img src=".github/screens.png" alt="Logo"  >
 
-O SanPaul é um aplicativo desenvolvido em React Native que proporciona uma jornada educativa no mundo da matemática. Este projeto foi idealizado para oferecer uma plataforma interativa e acessível, permitindo aos usuários a oportunidade de aprimorar seus conhecimentos por meio de questionários diversificados e desafiadores.
+O SanPaul é um aplicativo desenvolvido em React Native que permite a resoluçnao de um questionáriuo simples de matemática. Este projeto oferece uma plataforma interativa e acessível, permitindo aos usuários responder o questionário quantas vezes desejar e ter seu feedback ao final. Também permite a consulta dos útimos feedbacks que ficam salvos no dispositivo.
 
 ### Feito com
 
@@ -65,23 +62,23 @@ Essa lista apresenta as tecnologias e ferramentas utilizadas no projeto.
 
 ## Introdução
 
-Para utilizar o SanPaul, basta clonar ou baixar o repositório e seguir as instruções de instalação disponíveis no arquivo README do diretório principal. Uma vez instalado, você terá acesso a uma ampla gama de questionários de matemática prontos para desafiar e expandir seus conhecimentos.
+Para utilizar o aplicativo, basta clonar ou baixar o repositório e seguir as instruções de instalação disponíveis abaixo. Uma vez instalado, você terá acesso a todas funcionalidades do mesmo sem necessitar se logar.
 
 ### Pre-requisitos
 
-Antes de começar a utilizar o SanPaul com o React Native CLI, certifique-se de ter o ambiente devidamente configurado. Caso não esteaj utilize esse guia:
+Antes de começar a utilizar o aplicativo certifique-se de ter o ambiente devidamente configurado para executar projetos react native com CLI. Caso não tenha configurado basta segiuir o guia a baixo:
 
 - [Ambiente React Native](https://react-native.rocketseat.dev/)
 
 ### Instalação
 
-Seguem as instruções de como executar o app
+Seguem as instruções de como executar o app:
 
 1. Clone o repositório
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/danielsousast/saintpaul
    ```
-2. Install Yarn/NPM packages
+2. Instalar as dependências Yarn/NPM
 
    ```sh
    yarn
@@ -93,7 +90,7 @@ Seguem as instruções de como executar o app
    npm install
    ```
 
-3. Antes de executar no ios instale as dependências nativas:
+3. Antes de executar no iOS instale as dependências nativas:
 
    ```sh
     npx pod-install ios
@@ -111,20 +108,19 @@ Seguem as instruções de como executar o app
    yarn android
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 ## Contribuições
 
 Se você tiver alguma sugestão que possa tornar isso melhor, por favor, faça um fork do repositório e crie um pull request. Você também pode simplesmente abrir uma issue com a tag 'melhoria'.
-Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
+
+Não se esqueça de dar uma estrela ao projeto!
 
 1. Faça o fork do projeto
 2. Crie sua branch (`git checkout -b feature/AmazingFeature`)
 3. Faça o commit com as alterações (`git commit -m 'Add some AmazingFeature'`)
 4. Faça o push (`git push origin feature/AmazingFeature`)
 5. Abra seu pull request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Licença
 
@@ -136,4 +132,4 @@ Daniel Sousa - [danielsousast](https://www.linkedin.com/in/danielsousast/)
 
 daniel.sousa.developer@gmail.com
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
